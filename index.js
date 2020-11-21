@@ -1,5 +1,8 @@
 const express=require('express')
 const app=express()
+const Passport=require('passport')
+const GooglePass=require('passport-google-oauth20').Strategy;
+Passport.use(new GooglePass());
 
 app.get("/",(req,res)=>{
     res.send({hi:"good to see you"})
